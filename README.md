@@ -1,4 +1,4 @@
-# Optimizing Compilers infrastructure
+# Optimizing Compiler infrastructure
 
 official [LLVM BOLT tutorial](https://github.com/facebookincubator/BOLT/blob/main/bolt/docs/OptimizingClang.md) implemented in `nix`.
 
