@@ -30,11 +30,11 @@ With lesser priority, PGO and LTO are also in the scope and will be enabled by d
 - `x86_64`
 
 ## Roadmap
-- make it work to any extent
-- `rustc` support
-- `go 1.18+` support
-- creation of a collection of `nix-shell` build environments which use optimizing compilers
-- overriding / overlaying the `nixpkgs` packages which would greately benefit from being built by optimizing compiler [and are not configured this way by default]
+- [ ] make it work to any extent 
+- [ ] `rustc` support
+- [ ] `go 1.18+` support
+- [ ] creation of a collection of `nix-shell` build environments which use optimizing compilers
+- [ ] overriding / overlaying the `nixpkgs` packages which would greately benefit from being built by optimizing compiler [and are not configured this way by default]
 e.g.: nixpkgs versions of Python
 
 
