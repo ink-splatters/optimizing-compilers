@@ -2,18 +2,20 @@
 # https://nixos.wiki/wiki/LLVM
 # https://github.com/facebookincubator/BOLT/blob/main/bolt/docs/OptimizingClang.md
 
-with import <nixpkgs> { };
+{ pkgs ? import <nixpkgs> { } }:
+with pkgs;
 let
   gccForLibs = stdenv.cc.cc;
 in
-pkgs.mkShell {
+mkShell {
   name = "llvm-env";
 
-  buildInputs = with pkgs ; [
+  buildInputs = [
     bashInteractive
     llvmPackages_14.llvm
     cmake
     ninja
+    nixfmt
     nixpkgs-fmt
   ];
 
@@ -29,6 +31,10 @@ pkgs.mkShell {
     "-DLLVM_ENABLE_PROJECTS=clang;libcxx;libcxxabi"
     "-DLLVM_TARGETS_TO_BUILD=host"
   ];
+  shellHook = ''
+    export PS1="\n\[\033[1;32m\][nix-shell:\w]\$\[\033[0m\] "
+    export TOPLEV=$(pwd)
+  '';
 
 }
 
