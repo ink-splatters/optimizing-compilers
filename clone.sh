@@ -6,7 +6,7 @@ set -o pipefail
 
 DEFAULT_BRANCH=llvmorg-14.0.6
 BRANCH="$1"
-if [ "$BRANCH == "" ] ;
+if [ "$BRANCH" == "" ] ; then
 	BRANCH="$DEFAULT_BRANCH"
 fi
 
