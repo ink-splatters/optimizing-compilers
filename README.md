@@ -1,5 +1,7 @@
 # Optimizing Compiler infrastructure
 
+**This has never been worked on and hence archived. The idea is not ditched, so I'm planning to resume it once I have time.**
+
 official [LLVM BOLT tutorial](https://github.com/facebookincubator/BOLT/blob/main/bolt/docs/OptimizingClang.md) implemented in `nix`.
 
 Seen as the base for optimizing compiler infrastructure easily available out-of-the box.
